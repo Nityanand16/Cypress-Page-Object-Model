@@ -1,0 +1,550 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 12,
+    "passes": 12,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-03T21:12:34.556Z",
+    "end": "2021-03-03T21:14:28.107Z",
+    "duration": 45265,
+    "testsRegistered": 12,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9cfe6c4-6aec-49ef-a482-970fccdb6234",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/accountSummaryPage.spec.js",
+      "file": "cypress/integration/testcase/accountSummaryPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "49a17c81-22f8-499e-aea1-46a90c79459a",
+          "title": "check the different links available at the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "assert the account summary page",
+              "fullTitle": "check the different links available at the page assert the account summary page",
+              "timedOut": null,
+              "duration": 4041,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_accountSummaryPage[\"default\"].getAccountSummaryheading().should('be.visible');\ncy.url().should('include', 'account');",
+              "err": {},
+              "uuid": "d3449538-6abd-4a48-8d42-ef7438545eaf",
+              "parentUUID": "49a17c81-22f8-499e-aea1-46a90c79459a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test the Logout Button",
+              "fullTitle": "check the different links available at the page Test the Logout Button",
+              "timedOut": null,
+              "duration": 2578,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Username & Assert\n_accountSummaryPage[\"default\"].getUsernameDropNDown().should('be.visible').click(); //Click on Logout Button & Assert\n\n_accountSummaryPage[\"default\"].getLogoutSign().should('be.visible').click(); //Come back to Home Page & Assert Logout\n\n_homePage[\"default\"].getHomePageheading().should('be.visible');",
+              "err": {},
+              "uuid": "acb5552f-6c23-4b5c-9f9b-0102bb7d7f00",
+              "parentUUID": "49a17c81-22f8-499e-aea1-46a90c79459a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d3449538-6abd-4a48-8d42-ef7438545eaf",
+            "acb5552f-6c23-4b5c-9f9b-0102bb7d7f00"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6619,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "08e55d51-abab-4023-8d9c-d313ec2e196e",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/feedbackPage.spec.js",
+      "file": "cypress/integration/testcase/feedbackPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f8ae625-2f58-45c2-832b-1c44b5dddf6d",
+          "title": "check the different links available at the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Move to Online Banking Page",
+              "fullTitle": "check the different links available at the page Move to Online Banking Page",
+              "timedOut": null,
+              "duration": 6910,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click at Feedback Page & Assert\n_homePage[\"default\"].getFeedbackPage().click();\n_feedbackPage[\"default\"].getFBheading().should('be.visible').contains('Feedback').and('have.text', 'Feedback'); //Click at Frequentlly Asked Question Link & Assert\n\n_feedbackPage[\"default\"].getFAQLink().click();\n_feedbackPage[\"default\"].getFAQHeading().should('be.visible').should('have.text', 'Frequently Asked Questions'); //Come Back to Feedback Page\n\ncy.go('back'); //Click at Your Name & write the Random name & Assert\n_feedbackPage[\"default\"].getYourName().should('be.visible').should('be.enabled').type(randomName); //Click at Your Email Address & write the Random Emmail Address & Assert\n\n_feedbackPage[\"default\"].getYourEmailAddress().should('be.visible').should('be.enabled').type(randomEmailId); //Click at Subject & Pass the Random Text & Assert\n\n_feedbackPage[\"default\"].getSubject().should('be.visible').should('be.enabled').type(randomtext); //Click at Type Your Questions Here & Pass the Random Text & Assert\n\n_feedbackPage[\"default\"].getAskYourQuestionsHere().should('be.visible').should('be.enabled').type(randomtext); //Click at Send Message Button & Assert\n\n_feedbackPage[\"default\"].getSendMessage().should('be.enabled').click(); //Assert Customer Service Message\n\n_feedbackPage[\"default\"].getCustomerServiceMessage().contains('Feedback').should('be.visible').should('have.text', 'Feedback');",
+              "err": {},
+              "uuid": "004efe76-e6bf-4070-aa68-c88d2126f6e0",
+              "parentUUID": "7f8ae625-2f58-45c2-832b-1c44b5dddf6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "004efe76-e6bf-4070-aa68-c88d2126f6e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6910,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a75fdea1-a124-4072-a858-d1c512e7a991",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/homepage.spec.js",
+      "file": "cypress/integration/testcase/homepage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b534fb4-ac53-402e-a738-69a4c06fde09",
+          "title": "Check the link of the Home Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Search Button",
+              "fullTitle": "Check the link of the Home Page Verify the Search Button",
+              "timedOut": null,
+              "duration": 2030,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homePage[\"default\"].getSearch().should(\"be.visible\").should(\"be.enabled\").clear().type(\"zero{enter}\");\ncy.contains(\"Zero - FAQ - Frequently Asked Questions\").should(\"have.text\", \"Zero - FAQ - Frequently Asked Questions\");\ncy.get('div[class=\"top_offset\"]>ul>li>a').each(function ($el, index, $list) {\n  cy.log(index);\n  if ($el.index[2] == \"Zero - FAQ - Frequently Asked Questions\") cy.wrap($el).click();\n});",
+              "err": {},
+              "uuid": "ae37c8df-aa65-4ae5-b6d6-c9444088a12e",
+              "parentUUID": "0b534fb4-ac53-402e-a738-69a4c06fde09",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae37c8df-aa65-4ae5-b6d6-c9444088a12e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2030,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ef8f8e24-026d-4be6-ae0c-aacec2c2d84a",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/onlineBankingPage.spec.js",
+      "file": "cypress/integration/testcase/onlineBankingPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33b54480-dc86-47a7-bd93-cc6b8b9fd372",
+          "title": "check the different links available at the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Move to Online Banking Page",
+              "fullTitle": "check the different links available at the page Move to Online Banking Page",
+              "timedOut": null,
+              "duration": 4542,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homePage[\"default\"].getOnlineBankingPage().click();\n_onlineBankingPage[\"default\"].getOBheading().should('be.visible').contains('Online Banking').and('have.text', 'Online Banking');",
+              "err": {},
+              "uuid": "96f2b580-573f-4ab5-be03-537478502ce1",
+              "parentUUID": "33b54480-dc86-47a7-bd93-cc6b8b9fd372",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "96f2b580-573f-4ab5-be03-537478502ce1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4542,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b1c2787f-ff88-45b1-9f7b-5030ac8d5e17",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/payBillsPage.spec.js",
+      "file": "cypress/integration/testcase/payBillsPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96f94864-3737-48ea-bbf9-a25269d8e158",
+          "title": "check the different links available at the PayBills page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Move to PayBills Page, Pay Saved Payee and check all the links",
+              "fullTitle": "check the different links available at the PayBills page Move to PayBills Page, Pay Saved Payee and check all the links",
+              "timedOut": null,
+              "duration": 5871,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//In Pay Saved Payee, click at Payee and select the option\n_payBillsPage[\"default\"].getPayee().select('Bank of America').should('have.value', 'bofa'); //Click at Account and Select the Option\n\n_payBillsPage[\"default\"].getAccount().select('Checking').should('have.value', '2'); //Click at Amount and Pass the Random number\n\n_payBillsPage[\"default\"].getamount().should('be.visible').should('be.enabled').type(UniqueNumber); //Select the Date in Calender\n\n_payBillsPage[\"default\"].getDate().click().select;\n_payBillsPage[\"default\"].getCalender().each(function ($el, index, $list) {\n  var datename = $el.text();\n  if (datename == '14') {\n    cy.wrap($el).click();\n  }\n}); //Select the Description and Pass the Random message\n\n_payBillsPage[\"default\"].getDescription().should('be.visible').should('be.enabled').type(randomtext); //Click at Pay Button\n\n_payBillsPage[\"default\"].getPayButton().should('be.visible').click(); //Assert the Alert Message after Pay click\n\n_payBillsPage[\"default\"].getAlertMessge().should('have.text', 'The payment was successfully submitted.');",
+              "err": {},
+              "uuid": "dba7ad29-542f-4bfc-9d1e-f517f71be33c",
+              "parentUUID": "96f94864-3737-48ea-bbf9-a25269d8e158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Move to Add New Payee and test all the links",
+              "fullTitle": "check the different links available at the PayBills page Move to Add New Payee and test all the links",
+              "timedOut": null,
+              "duration": 3922,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click at Pay Bills Page and Assert\n_payBillsPage[\"default\"].getAddNewPayee().click();\n_payBillsPage[\"default\"].getaddNewPayeePageheading().should('have.text', 'Who are you paying?'); //Click at Payee Name and pass the Random name\n\n_payBillsPage[\"default\"].getPayeeName().should('be.visible').should('be.enabled').type(randomName); //Click at Payee Address and Pass the Random Address\n\n_payBillsPage[\"default\"].getPayeeAddress().should('be.visible').should('be.enabled').type(randomAddress); //Click at Payee Account and Pass the Account\n\n_payBillsPage[\"default\"].getANPAccount().should('be.visible').should('be.enabled').type(UniqueNumber); //Click at the Payee Details and Pass the Payee Details\n\n_payBillsPage[\"default\"].getPayeeDetails().should('be.visible').should('be.enabled').type(randomName); //Click at the Add Button and Add the Payee\n\n_payBillsPage[\"default\"].getAddButton().click(); //Confirm the Alert of Payee Created\n\n_payBillsPage[\"default\"].getAlertConfirmation().contains('was successfully created.').should('be.visible');",
+              "err": {},
+              "uuid": "bbb56f62-49dd-48a2-85f7-4d8a83ea3e27",
+              "parentUUID": "96f94864-3737-48ea-bbf9-a25269d8e158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Move to Purchase Foreign Currency Page and test all the links",
+              "fullTitle": "check the different links available at the PayBills page Move to Purchase Foreign Currency Page and test all the links",
+              "timedOut": null,
+              "duration": 3433,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click at Purchase Foreign Currency Page and Assert\n_payBillsPage[\"default\"].getPurchaseForeignCurrency().click();\n_payBillsPage[\"default\"].getPurchaseForeignCurrencyheading().should('have.text', 'Purchase foreign currency cash'); //Click at Currency and Select from Drop Down\n\n_payBillsPage[\"default\"].getCurrency().select('Denmark (krone)').should('have.value', 'DKK'); //Click at Amount and Pass the Random Amount\n\n_payBillsPage[\"default\"].getPFCAmount().should('be.visible').should('be.enabled').type(UniqueNumber); //Check the USD Radio Button, it should be visible and not checked\n\n_payBillsPage[\"default\"].getUSDRadiobutton().should('be.visible').should('not.be.checked').click(); //Check the Selected Currency Button, it shoud be visible and not checked\n\n_payBillsPage[\"default\"].getSelectedCurrency().should('be.visible').should('not.be.checked').click(); //Click the Calculated Costs Button\n\n_payBillsPage[\"default\"].getCalculateCostButton().should('be.visible').click(); //Check the Conversion Amount Message\n\n_payBillsPage[\"default\"].getConversionAmountMessage().contains('U.S. dollar (USD)').should('be.visible'); //Click at Purchase Button\n\n_payBillsPage[\"default\"].getPurchaseButton().should('be.visible').click(); //Assert Purchase Foreign Currency Alert\n\n_payBillsPage[\"default\"].getPFCAlert().should('have.text', 'Foreign currency cash was successfully purchased.');",
+              "err": {},
+              "uuid": "e3be07d0-4514-49a3-bfb2-336c603307b8",
+              "parentUUID": "96f94864-3737-48ea-bbf9-a25269d8e158",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dba7ad29-542f-4bfc-9d1e-f517f71be33c",
+            "bbb56f62-49dd-48a2-85f7-4d8a83ea3e27",
+            "e3be07d0-4514-49a3-bfb2-336c603307b8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "425ccde7-ad45-4167-89d6-b55c6dc5343b",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/signinpage.spec.js",
+      "file": "cypress/integration/testcase/signinpage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+          "title": "Check the credentials at Signin Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify with invalid credentials",
+              "fullTitle": "Check the credentials at Signin Page verify with invalid credentials",
+              "timedOut": null,
+              "duration": 2625,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('signin').then(function (details) {\n  cy.login(details.invaliduser, details.invalidpassword);\n  cy.contains('Login and/or password are wrong.');\n  _signinPage[\"default\"].getInvalidCredentialsAlert().should('be.visible');\n}); //cy.login comes from support/command.js file",
+              "err": {},
+              "uuid": "d45b4025-be6b-498e-9e9e-a5933531abc8",
+              "parentUUID": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify with valid credentials",
+              "fullTitle": "Check the credentials at Signin Page verify with valid credentials",
+              "timedOut": null,
+              "duration": 2032,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('signin').then(function (details) {\n  cy.login(details.adminuser, details.adminpassword);\n  cy.log(details.adminuser);\n  cy.log(details.adminpassword);\n  _accountSummaryPage[\"default\"].getAccountSummaryheading().should('be.visible');\n  cy.url().should('include', 'account');\n});",
+              "err": {},
+              "uuid": "271ab4e5-570d-49d0-a161-61efa2acd4ef",
+              "parentUUID": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Forgot Password Link",
+              "fullTitle": "Check the credentials at Signin Page Verify the Forgot Password Link",
+              "timedOut": null,
+              "duration": 2033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Forget Password Link & Assert\n_signinPage[\"default\"].getForgetPassword().should('be.visible').click(); //Click on Email & Assert\n\n_signinPage[\"default\"].getForgetPasswordEmail().should('be.visible').should('be.enabled').type(randomEmailId); //Click on Send Password Button & Assert\n\n_signinPage[\"default\"].getFPSendPassword().should('be.visible').click(); //Alert Assert\n\n_signinPage[\"default\"].getFPEmailSend().should('be.visible');",
+              "err": {},
+              "uuid": "6de006a6-4f93-4062-a6cc-2d8fc3cfaf8c",
+              "parentUUID": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d45b4025-be6b-498e-9e9e-a5933531abc8",
+            "271ab4e5-570d-49d0-a161-61efa2acd4ef",
+            "6de006a6-4f93-4062-a6cc-2d8fc3cfaf8c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6690,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "1ab23c59-a548-48d4-8c64-a51807b4f2bc",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/transferFundsPage.spec.js",
+      "file": "cypress/integration/testcase/transferFundsPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8f13252e-3a71-4518-8a3b-2c3158283c6c",
+          "title": "check the different links available at the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Move to Transfer Funds Page & test all the elements of the Page",
+              "fullTitle": "check the different links available at the page Move to Transfer Funds Page & test all the elements of the Page",
+              "timedOut": null,
+              "duration": 5248,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click at the Transfer Funds and Assert\n_common[\"default\"].getTransferFunds().click();\n_transferFundsPage[\"default\"].getTFPageheading().should('be.visible'); //Click at From Account and Select from the Drop Down\n\n_transferFundsPage[\"default\"].getFromAccount().select('3'); //Click at the To Account & Select from the Drop Down\n\n_transferFundsPage[\"default\"].getToAccount().select('Loan(Avail. balance = $ 780)').should('have.value', '4'); //Click at Amount & Pass the Random Amount\n\n_transferFundsPage[\"default\"].getAmount().should('be.visible').should('be.enabled').type(UniqueNumber); //Click at Description & Pass the Random Text\n\n_transferFundsPage[\"default\"].getDescription().should('be.visible').should('be.enabled').type(randomtext); //Click at Continue Button\n\n_transferFundsPage[\"default\"].getContinueButton().should('be.visible').click(); //Assert the Verification Message\n\n_transferFundsPage[\"default\"].getVerificationMessage().should('have.text', 'Transfer Money & Make Payments - Verify'); //Click at Submit Button\n\n_transferFundsPage[\"default\"].getSubmitButton().should('be.visible').click(); //Assert the Confirmation Message\n\n_transferFundsPage[\"default\"].getConfirmationMessage().should('have.text', 'Transfer Money & Make Payments - Confirm');",
+              "err": {},
+              "uuid": "a55f6df2-e6dd-41fa-b0d7-1a1e9264b6ee",
+              "parentUUID": "8f13252e-3a71-4518-8a3b-2c3158283c6c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a55f6df2-e6dd-41fa-b0d7-1a1e9264b6ee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5248,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

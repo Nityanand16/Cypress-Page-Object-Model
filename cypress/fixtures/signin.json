@@ -1,0 +1,8 @@
+{
+    "adminuser":"username",
+    "adminpassword":"password",
+    "invaliduser":"invalidusername",
+    "invalidpassword":"invalidpassword", 
+    "customeruser":"username",
+    "customerpassword":"password"
+}

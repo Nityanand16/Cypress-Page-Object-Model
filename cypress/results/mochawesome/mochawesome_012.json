@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-03T21:13:47.595Z",
+    "end": "2021-03-03T21:14:02.450Z",
+    "duration": 14855,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b1c2787f-ff88-45b1-9f7b-5030ac8d5e17",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/payBillsPage.spec.js",
+      "file": "cypress/integration/testcase/payBillsPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96f94864-3737-48ea-bbf9-a25269d8e158",
+          "title": "check the different links available at the PayBills page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Move to PayBills Page, Pay Saved Payee and check all the links",
+              "fullTitle": "check the different links available at the PayBills page Move to PayBills Page, Pay Saved Payee and check all the links",
+              "timedOut": null,
+              "duration": 5871,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//In Pay Saved Payee, click at Payee and select the option\n_payBillsPage[\"default\"].getPayee().select('Bank of America').should('have.value', 'bofa'); //Click at Account and Select the Option\n\n_payBillsPage[\"default\"].getAccount().select('Checking').should('have.value', '2'); //Click at Amount and Pass the Random number\n\n_payBillsPage[\"default\"].getamount().should('be.visible').should('be.enabled').type(UniqueNumber); //Select the Date in Calender\n\n_payBillsPage[\"default\"].getDate().click().select;\n_payBillsPage[\"default\"].getCalender().each(function ($el, index, $list) {\n  var datename = $el.text();\n  if (datename == '14') {\n    cy.wrap($el).click();\n  }\n}); //Select the Description and Pass the Random message\n\n_payBillsPage[\"default\"].getDescription().should('be.visible').should('be.enabled').type(randomtext); //Click at Pay Button\n\n_payBillsPage[\"default\"].getPayButton().should('be.visible').click(); //Assert the Alert Message after Pay click\n\n_payBillsPage[\"default\"].getAlertMessge().should('have.text', 'The payment was successfully submitted.');",
+              "err": {},
+              "uuid": "dba7ad29-542f-4bfc-9d1e-f517f71be33c",
+              "parentUUID": "96f94864-3737-48ea-bbf9-a25269d8e158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Move to Add New Payee and test all the links",
+              "fullTitle": "check the different links available at the PayBills page Move to Add New Payee and test all the links",
+              "timedOut": null,
+              "duration": 3922,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click at Pay Bills Page and Assert\n_payBillsPage[\"default\"].getAddNewPayee().click();\n_payBillsPage[\"default\"].getaddNewPayeePageheading().should('have.text', 'Who are you paying?'); //Click at Payee Name and pass the Random name\n\n_payBillsPage[\"default\"].getPayeeName().should('be.visible').should('be.enabled').type(randomName); //Click at Payee Address and Pass the Random Address\n\n_payBillsPage[\"default\"].getPayeeAddress().should('be.visible').should('be.enabled').type(randomAddress); //Click at Payee Account and Pass the Account\n\n_payBillsPage[\"default\"].getANPAccount().should('be.visible').should('be.enabled').type(UniqueNumber); //Click at the Payee Details and Pass the Payee Details\n\n_payBillsPage[\"default\"].getPayeeDetails().should('be.visible').should('be.enabled').type(randomName); //Click at the Add Button and Add the Payee\n\n_payBillsPage[\"default\"].getAddButton().click(); //Confirm the Alert of Payee Created\n\n_payBillsPage[\"default\"].getAlertConfirmation().contains('was successfully created.').should('be.visible');",
+              "err": {},
+              "uuid": "bbb56f62-49dd-48a2-85f7-4d8a83ea3e27",
+              "parentUUID": "96f94864-3737-48ea-bbf9-a25269d8e158",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Move to Purchase Foreign Currency Page and test all the links",
+              "fullTitle": "check the different links available at the PayBills page Move to Purchase Foreign Currency Page and test all the links",
+              "timedOut": null,
+              "duration": 3433,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click at Purchase Foreign Currency Page and Assert\n_payBillsPage[\"default\"].getPurchaseForeignCurrency().click();\n_payBillsPage[\"default\"].getPurchaseForeignCurrencyheading().should('have.text', 'Purchase foreign currency cash'); //Click at Currency and Select from Drop Down\n\n_payBillsPage[\"default\"].getCurrency().select('Denmark (krone)').should('have.value', 'DKK'); //Click at Amount and Pass the Random Amount\n\n_payBillsPage[\"default\"].getPFCAmount().should('be.visible').should('be.enabled').type(UniqueNumber); //Check the USD Radio Button, it should be visible and not checked\n\n_payBillsPage[\"default\"].getUSDRadiobutton().should('be.visible').should('not.be.checked').click(); //Check the Selected Currency Button, it shoud be visible and not checked\n\n_payBillsPage[\"default\"].getSelectedCurrency().should('be.visible').should('not.be.checked').click(); //Click the Calculated Costs Button\n\n_payBillsPage[\"default\"].getCalculateCostButton().should('be.visible').click(); //Check the Conversion Amount Message\n\n_payBillsPage[\"default\"].getConversionAmountMessage().contains('U.S. dollar (USD)').should('be.visible'); //Click at Purchase Button\n\n_payBillsPage[\"default\"].getPurchaseButton().should('be.visible').click(); //Assert Purchase Foreign Currency Alert\n\n_payBillsPage[\"default\"].getPFCAlert().should('have.text', 'Foreign currency cash was successfully purchased.');",
+              "err": {},
+              "uuid": "e3be07d0-4514-49a3-bfb2-336c603307b8",
+              "parentUUID": "96f94864-3737-48ea-bbf9-a25269d8e158",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dba7ad29-542f-4bfc-9d1e-f517f71be33c",
+            "bbb56f62-49dd-48a2-85f7-4d8a83ea3e27",
+            "e3be07d0-4514-49a3-bfb2-336c603307b8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

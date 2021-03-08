@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-03T21:13:35.738Z",
+    "end": "2021-03-03T21:13:41.863Z",
+    "duration": 6125,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef8f8e24-026d-4be6-ae0c-aacec2c2d84a",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/onlineBankingPage.spec.js",
+      "file": "cypress/integration/testcase/onlineBankingPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33b54480-dc86-47a7-bd93-cc6b8b9fd372",
+          "title": "check the different links available at the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Move to Online Banking Page",
+              "fullTitle": "check the different links available at the page Move to Online Banking Page",
+              "timedOut": null,
+              "duration": 4542,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homePage[\"default\"].getOnlineBankingPage().click();\n_onlineBankingPage[\"default\"].getOBheading().should('be.visible').contains('Online Banking').and('have.text', 'Online Banking');",
+              "err": {},
+              "uuid": "96f2b580-573f-4ab5-be03-537478502ce1",
+              "parentUUID": "33b54480-dc86-47a7-bd93-cc6b8b9fd372",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "96f2b580-573f-4ab5-be03-537478502ce1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4542,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

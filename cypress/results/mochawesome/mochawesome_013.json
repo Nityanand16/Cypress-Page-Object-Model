@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-03T21:14:08.701Z",
+    "end": "2021-03-03T21:14:16.880Z",
+    "duration": 8179,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "425ccde7-ad45-4167-89d6-b55c6dc5343b",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/signinpage.spec.js",
+      "file": "cypress/integration/testcase/signinpage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+          "title": "Check the credentials at Signin Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify with invalid credentials",
+              "fullTitle": "Check the credentials at Signin Page verify with invalid credentials",
+              "timedOut": null,
+              "duration": 2625,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('signin').then(function (details) {\n  cy.login(details.invaliduser, details.invalidpassword);\n  cy.contains('Login and/or password are wrong.');\n  _signinPage[\"default\"].getInvalidCredentialsAlert().should('be.visible');\n}); //cy.login comes from support/command.js file",
+              "err": {},
+              "uuid": "d45b4025-be6b-498e-9e9e-a5933531abc8",
+              "parentUUID": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify with valid credentials",
+              "fullTitle": "Check the credentials at Signin Page verify with valid credentials",
+              "timedOut": null,
+              "duration": 2032,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('signin').then(function (details) {\n  cy.login(details.adminuser, details.adminpassword);\n  cy.log(details.adminuser);\n  cy.log(details.adminpassword);\n  _accountSummaryPage[\"default\"].getAccountSummaryheading().should('be.visible');\n  cy.url().should('include', 'account');\n});",
+              "err": {},
+              "uuid": "271ab4e5-570d-49d0-a161-61efa2acd4ef",
+              "parentUUID": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Forgot Password Link",
+              "fullTitle": "Check the credentials at Signin Page Verify the Forgot Password Link",
+              "timedOut": null,
+              "duration": 2033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Forget Password Link & Assert\n_signinPage[\"default\"].getForgetPassword().should('be.visible').click(); //Click on Email & Assert\n\n_signinPage[\"default\"].getForgetPasswordEmail().should('be.visible').should('be.enabled').type(randomEmailId); //Click on Send Password Button & Assert\n\n_signinPage[\"default\"].getFPSendPassword().should('be.visible').click(); //Alert Assert\n\n_signinPage[\"default\"].getFPEmailSend().should('be.visible');",
+              "err": {},
+              "uuid": "6de006a6-4f93-4062-a6cc-2d8fc3cfaf8c",
+              "parentUUID": "5daeaaed-edb9-4d5d-913b-8888c28103d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d45b4025-be6b-498e-9e9e-a5933531abc8",
+            "271ab4e5-570d-49d0-a161-61efa2acd4ef",
+            "6de006a6-4f93-4062-a6cc-2d8fc3cfaf8c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6690,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

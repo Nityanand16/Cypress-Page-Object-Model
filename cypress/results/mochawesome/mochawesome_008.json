@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-03T21:12:57.758Z",
+    "end": "2021-03-03T21:13:06.090Z",
+    "duration": 8332,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9cfe6c4-6aec-49ef-a482-970fccdb6234",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/accountSummaryPage.spec.js",
+      "file": "cypress/integration/testcase/accountSummaryPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "49a17c81-22f8-499e-aea1-46a90c79459a",
+          "title": "check the different links available at the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "assert the account summary page",
+              "fullTitle": "check the different links available at the page assert the account summary page",
+              "timedOut": null,
+              "duration": 4041,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_accountSummaryPage[\"default\"].getAccountSummaryheading().should('be.visible');\ncy.url().should('include', 'account');",
+              "err": {},
+              "uuid": "d3449538-6abd-4a48-8d42-ef7438545eaf",
+              "parentUUID": "49a17c81-22f8-499e-aea1-46a90c79459a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test the Logout Button",
+              "fullTitle": "check the different links available at the page Test the Logout Button",
+              "timedOut": null,
+              "duration": 2578,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Username & Assert\n_accountSummaryPage[\"default\"].getUsernameDropNDown().should('be.visible').click(); //Click on Logout Button & Assert\n\n_accountSummaryPage[\"default\"].getLogoutSign().should('be.visible').click(); //Come back to Home Page & Assert Logout\n\n_homePage[\"default\"].getHomePageheading().should('be.visible');",
+              "err": {},
+              "uuid": "acb5552f-6c23-4b5c-9f9b-0102bb7d7f00",
+              "parentUUID": "49a17c81-22f8-499e-aea1-46a90c79459a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d3449538-6abd-4a48-8d42-ef7438545eaf",
+            "acb5552f-6c23-4b5c-9f9b-0102bb7d7f00"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6619,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

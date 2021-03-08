@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-03T21:13:12.043Z",
+    "end": "2021-03-03T21:13:20.547Z",
+    "duration": 8504,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "08e55d51-abab-4023-8d9c-d313ec2e196e",
+      "title": "",
+      "fullFile": "cypress/integration/testcase/feedbackPage.spec.js",
+      "file": "cypress/integration/testcase/feedbackPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f8ae625-2f58-45c2-832b-1c44b5dddf6d",
+          "title": "check the different links available at the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Move to Online Banking Page",
+              "fullTitle": "check the different links available at the page Move to Online Banking Page",
+              "timedOut": null,
+              "duration": 6910,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click at Feedback Page & Assert\n_homePage[\"default\"].getFeedbackPage().click();\n_feedbackPage[\"default\"].getFBheading().should('be.visible').contains('Feedback').and('have.text', 'Feedback'); //Click at Frequentlly Asked Question Link & Assert\n\n_feedbackPage[\"default\"].getFAQLink().click();\n_feedbackPage[\"default\"].getFAQHeading().should('be.visible').should('have.text', 'Frequently Asked Questions'); //Come Back to Feedback Page\n\ncy.go('back'); //Click at Your Name & write the Random name & Assert\n_feedbackPage[\"default\"].getYourName().should('be.visible').should('be.enabled').type(randomName); //Click at Your Email Address & write the Random Emmail Address & Assert\n\n_feedbackPage[\"default\"].getYourEmailAddress().should('be.visible').should('be.enabled').type(randomEmailId); //Click at Subject & Pass the Random Text & Assert\n\n_feedbackPage[\"default\"].getSubject().should('be.visible').should('be.enabled').type(randomtext); //Click at Type Your Questions Here & Pass the Random Text & Assert\n\n_feedbackPage[\"default\"].getAskYourQuestionsHere().should('be.visible').should('be.enabled').type(randomtext); //Click at Send Message Button & Assert\n\n_feedbackPage[\"default\"].getSendMessage().should('be.enabled').click(); //Assert Customer Service Message\n\n_feedbackPage[\"default\"].getCustomerServiceMessage().contains('Feedback').should('be.visible').should('have.text', 'Feedback');",
+              "err": {},
+              "uuid": "004efe76-e6bf-4070-aa68-c88d2126f6e0",
+              "parentUUID": "7f8ae625-2f58-45c2-832b-1c44b5dddf6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "004efe76-e6bf-4070-aa68-c88d2126f6e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6910,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

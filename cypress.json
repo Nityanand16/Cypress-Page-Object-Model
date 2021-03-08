@@ -1,0 +1,14 @@
+{   "chromeWebSecurity": false,
+
+    "env": {"url": "http://zero.webappsecurity.com/"},
+
+    
+    "reporter": "cypress-multi-reporters",
+        "reporterOptions": {
+          "configFile": "reporter-config.json"
+        }
+
+
+    
+      
+}
