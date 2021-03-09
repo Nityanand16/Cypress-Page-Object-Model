@@ -21,7 +21,7 @@ pipeline {
 				sh returnStdout: true, script: "npx mochawesome-merge 'cypress/results/mochawesome/*.json'>mochawesome.json"
 			}
 		}
-		stage('mochawesome-htm'){
+		stage('mochawesome-html'){
 			steps{
 				sh returnStdout: true, script: 'npx marge mochawesome.json'
 			}
