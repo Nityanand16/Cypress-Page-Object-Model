@@ -18,7 +18,7 @@ pipeline {
 		}
 		stage('Publish HTML Report'){
 				steps{
-					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/results/mochawesome', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/results/mochawesome-report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 				}
 		}
 	}
