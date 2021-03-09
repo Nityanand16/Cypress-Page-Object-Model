@@ -16,6 +16,16 @@ pipeline {
 					sh returnStdout: true, script: 'npx cypress run'
 				}
 		}
+		stage('mochawesome-merge'){
+			steps{
+				sh returnStdout: true, script: "npx mochawesome-merge 'cypress/results/mochawesome/*.json'>mochawesome.json"
+			}
+		}
+		stage('mochawesome-htm'){
+			steps{
+				sh returnStdout: true, script: 'npx marge mochawesome.json'
+			}
+		}
 		stage('Publish HTML Report'){
 				steps{
 					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/results/mochawesome', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
